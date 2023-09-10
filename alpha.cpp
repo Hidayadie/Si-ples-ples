@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <limits>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 void menuPermainan ();
@@ -442,176 +443,173 @@ void konversi() {
         cin >> arahKonversi;
         arahKonversi = tolower(arahKonversi);
         if (arahKonversi == 'm') {
-        int pilihanImperial;
-        int pilihanMetrik;
-        string satuanImperial;
-        string satuanMetrik;
-        double nilaiImperial;
-        double nilaiMetrik;
-        system("clear");
-        cout.flush();
-        cout << "\t+============================+" << endl;
-        cout << "\t|    Anda memilih panjang    |" << endl;
-        cout << "\t|                            |" << endl;
-        cout << "\t|       Mengkonversi         |" << endl;
-        cout << "\t|    Imperial -> Metrik      |" << endl;
-        cout << "\t|                            |" << endl;
-        cout << "\t| Harap masukkan satuan yang |" << endl;
-        cout << "\t| akan Anda gunakan          |" << endl;
-        cout << "\t| \033[31mTunggu sebentar.\033[0m           |" << endl;
-        cout << "\t+============================+" << endl;
-        sleep(1);
-        system("clear");
-        cout.flush();
-        cout << "\t+============================+" << endl;
-        cout << "\t|    Anda memilih panjang    |" << endl;
-        cout << "\t|                            |" << endl;
-        cout << "\t|       Mengkonversi         |" << endl;
-        cout << "\t|    Imperial -> Metrik      |" << endl;
-        cout << "\t|                            |" << endl;
-        cout << "\t| Harap masukkan satuan yang |" << endl;
-        cout << "\t| akan Anda gunakan          |" << endl;
-        cout << "\t| \033[31mTunggu sebentar..\033[0m          |" << endl;
-        cout << "\t+============================+" << endl;
-        sleep(1);
-        system("clear");
-        cout.flush();
-        cout << "\t+============================+" << endl;
-        cout << "\t|    Anda memilih panjang    |" << endl;
-        cout << "\t|                            |" << endl;
-        cout << "\t|       Mengkonversi         |" << endl;
-        cout << "\t|    Imperial -> Metrik      |" << endl;
-        cout << "\t|                            |" << endl;
-        cout << "\t| Harap masukkan satuan yang |" << endl;
-        cout << "\t| akan Anda gunakan          |" << endl;
-        cout << "\t| \033[31mTunggu sebentar...\033[0m         |" << endl;
-        cout << "\t+============================+" << endl;
-        sleep(1);
-        system("clear");
-        cout.flush();
-        cout << "\t+============================+" << endl;
-        cout << "\t|    Anda memilih panjang    |" << endl;
-        cout << "\t|                            |" << endl;
-        cout << "\t|       Mengkonversi         |" << endl;
-        cout << "\t|    Imperial -> Metrik      |" << endl;
-        cout << "\t|                            |" << endl;
-        cout << "\t| Harap masukkan satuan yang |" << endl;
-        cout << "\t| akan Anda gunakan          |" << endl;
-        cout << "\t| \033[31mTunggu sebentar.\033[0m           |" << endl;
-        cout << "\t+============================+" << endl;
-        sleep(1);
-        system("clear");
-        bool pilihNilai = true;
-        while (pilihNilai) {
-        cout << "+================================+" << endl;
-        cout << "|      Silahkan pilih satuan     |" << endl;
-        cout << "|            yang ada            |" <<endl;
-        cout << "+================================+" << endl;
-        cout << "| 1.  Inci      [in]   (inch)    |"  << endl;
-        cout << "| 2.  Kaki      [ft]   (feet)    |" << endl;
-        cout << "| 3.  Yard      [yd]   (yard)    |" <<endl;
-        cout << "| 4.  Mil       [mi]   (mile)    |" <<endl;
-        cout << "| 5.  Mil laut  [nmi]  (Nmile)   |" <<endl;
-        cout << "| 6.  Liga      [lea]  (league)  |" <<endl;
-        cout << "| 7.  Furlong   [fur]  (furlong) |" <<endl;
-        cout << "| 8.  Tangan    [hh]   (hand)    |" <<endl;
-        cout << "| 9.  Link      [ch]   (chain)   |" <<endl;
-        cout << "| 10. Rod       [rd]   (rod)     |" <<endl;
-        cout << "+================================+" << endl;
-        cout << "> ";
-        cin >> pilihanImperial;
-        switch (pilihanImperial) {
-        case 1: satuanImperial = "Inci"; break;
-        case 2: satuanImperial = "kaki"; break;
-        case 3: satuanImperial = "Yard"; break;
-        case 4: satuanImperial = "Mil"; break;
-        case 5: satuanImperial = "Mil Laut"; break;
-        case 6: satuanImperial = "Liga"; break;
-        case 7: satuanImperial = "Furlong"; break;
-        case 8: satuanImperial = "Tangan"; break;
-        case 9: satuanImperial = "Link"; break;
-        case 10: satuanImperial = "Rod"; break;
-        default: cout << "pilihan tidak valid, harap pilih ulang: "; cin >> pilihanImperial; break;
-        }
-        cout << "sekarang berikan nilai yang ingin anda konversikan: ";
-        cin >> nilaiImperial;
-        while (nilaiImperial == 0) {
-            cout << "tolong berikan nilai yang benar, nilai: "; cin >>    nilaiImperial;}
-        system("clear");
-        cout.flush();
-        cout << "\t+============================+" << endl;
-        cout << "\t|    Anda memilih panjang    |" << endl;
-        cout << "\t|                            |" << endl;
-        cout << "\t|       Mengkonversi         |" << endl;
-        cout << "\t|    Imperial -> Metrik      |" << endl;
-        cout << "\t|                            |" << endl;
-        cout << "\t| Memuat tabel daftar Metrik |" << endl;
-        cout << "\t| yang tersedia              |" << endl;
-        cout << "\t| \033[31mTunggu sebentar.\033[0m           |" << endl;
-        cout << "\t+============================+" << endl;
-        sleep(1);
-        system("clear");
-        cout.flush();
-        cout << "\t+============================+" << endl;
-        cout << "\t|    Anda memilih panjang    |" << endl;
-        cout << "\t|                            |" << endl;
-        cout << "\t|       Mengkonversi         |" << endl;
-        cout << "\t|    Imperial -> Metrik      |" << endl;
-        cout << "\t|                            |" << endl;
-        cout << "\t| Memuat tabel daftar Metrik |" << endl;
-        cout << "\t| yang tersedia              |" << endl;
-        cout << "\t| \033[31mTunggu sebentar..\033[0m          |" << endl;
-        cout << "\t+============================+" << endl;
-        sleep(1);
-        system("clear");
-        cout << "+================================+" << endl;
-        cout << "|      Silahkan pilih satuan     |" << endl;
-        cout << "|        yang ada (Meter)        |" <<endl;
-        cout << "+================================+" << endl;
-        cout << "| 1.  Nano      [nm]             |" <<endl;
-        cout << "| 2.  Mikro     [µm]             |" << endl;
-        cout << "| 3.  Mili      [mm]             |" << endl;
-        cout << "| 4.  Centi     [cm]             |" << endl;
-        cout << "| 5.  Desi      [dm]             |" <<endl;
-        cout << "| 6.  Meter     [m]              |" <<endl;
-        cout << "| 7.  Deka      [dam]            |" <<endl;
-        cout << "| 8.  Hekto     [hm]             |" <<endl;
-        cout << "| 9.  Kilo      [km]             |" <<endl;
-        cout << "| 10.  Mega     [Mm]             |" <<endl;
-        cout << "+================================+" << endl;
-        cout << "(anda sebelumnya memasukkan nilai sebesar " << nilaiImperial << " " << satuanImperial << ")" << endl;
-        cout << "> ";
-        cin >> pilihanMetrik;
-        switch (pilihanMetrik) {
-        case 1: satuanMetrik = "Nanometer"; break;
-        case 2: satuanMetrik = "Mikrometer"; break;
-        case 3: satuanMetrik = "Milimeter"; break;
-        case 4: satuanMetrik = "Centimeter"; break;
-        case 5: satuanMetrik = "Desieter"; break;
-        case 6: satuanMetrik = "Meter"; break;
-        case 7: satuanMetrik = "Dekameter"; break;
-        case 8: satuanMetrik = "Hektometer"; break;
-        case 9: satuanMetrik = "Kilometer"; break;
-        case 10: satuanMetrik = "Megameter"; break;
-        default: cout << "pilihan tidak valid, tolong masukkan nilai lagi: "; cin >> pilihanMetrik; break;}
-        cout << "\nAnda telah memilih untuk mengkonversikan, sebesar" << endl;
-        cout << nilaiImperial << " " << satuanImperial << " menjadi satuan dalam " << satuanMetrik << endl;
-        char yakin;
-        cout << "Apakah anda yakin dengan pilihan anda atau ingin kembali memilih dari awal?\nY untuk yakin, N untuk kembali (Y/n) ";
-        cin >> yakin;
-        system("clear");
-        if (yakin == 'y' || yakin == 'Y') {
-            pilihNilai = false;}
-        else if (yakin == 'n' || yakin == 'N') {
-            cout << "tunggu sebentar..." << endl;}
-        else {
-            cout << "pilihan tidak valid, harap pilih ulang (Y,y,N,n): "; cin >> yakin;}
-        }
-        cout << " +=========================================================+" <<endl;
-        cout << " Hasil konversi dari
+            int pilihanImperial;
+            int pilihanMetrik;
+            string satuanImperial;
+            string satuanMetrik;
+            double nilaiImperial;
+            double nilaiMetrik;
+            system("clear");
+            bool pilihNilai = true;
+            while (pilihNilai) {
+            cout << "+================================+" << endl;
+            cout << "|      Silahkan pilih satuan     |" << endl;
+            cout << "|            yang ada            |" <<endl;
+            cout << "+================================+" << endl;
+            cout << "| 1.  Inci      [in]   (inch)    |"  << endl;
+            cout << "| 2.  Kaki      [ft]   (feet)    |" << endl;
+            cout << "| 3.  Yard      [yd]   (yard)    |" <<endl;
+            cout << "| 4.  Mil       [mi]   (mile)    |" <<endl;
+            cout << "| 5.  Mil laut  [nmi]  (Nmile)   |" <<endl;
+            cout << "| 6.  Liga      [lea]  (league)  |" <<endl;
+            cout << "| 7.  Furlong   [fur]  (furlong) |" <<endl;
+            cout << "| 8.  Tangan    [hh]   (hand)    |" <<endl;
+            cout << "| 9.  Link      [ch]   (chain)   |" <<endl;
+            cout << "| 10. Rod       [rd]   (rod)     |" <<endl;
+            cout << "+================================+" << endl;
+            cout << "> ";
+            cin >> pilihanImperial;
+            switch (pilihanImperial) {
+            case 1: satuanImperial = "Inci"; break;
+            case 2: satuanImperial = "kaki"; break;
+            case 3: satuanImperial = "Yard"; break;
+            case 4: satuanImperial = "Mil"; break;
+            case 5: satuanImperial = "Mil Laut"; break;
+            case 6: satuanImperial = "Liga"; break;
+            case 7: satuanImperial = "Furlong"; break;
+            case 8: satuanImperial = "Tangan"; break;
+            case 9: satuanImperial = "Link"; break;
+            case 10: satuanImperial = "Rod"; break;
+            default: cout << "pilihan tidak valid, harap pilih ulang: "; cin >> pilihanImperial; break;
+            }
+            cout << "sekarang berikan nilai yang ingin anda konversikan: ";
+            cin >> nilaiImperial;
+            while (nilaiImperial == 0) {
+                cout << "tolong berikan nilai yang benar, nilai: "; cin >>    nilaiImperial;}
+            system("clear");
+            cout << "+================================+" << endl;
+            cout << "|      Silahkan pilih satuan     |" << endl;
+            cout << "|        yang ada (Meter)        |" <<endl;
+            cout << "+================================+" << endl;
+            cout << "| 1.  Nano      [nm]             |" <<endl;
+            cout << "| 2.  Mikro     [µm]             |" << endl;
+            cout << "| 3.  Mili      [mm]             |" << endl;
+            cout << "| 4.  Centi     [cm]             |" << endl;
+            cout << "| 5.  Desi      [dm]             |" <<endl;
+            cout << "| 6.  Meter     [m]              |" <<endl;
+            cout << "| 7.  Deka      [dam]            |" <<endl;
+            cout << "| 8.  Hekto     [hm]             |" <<endl;
+            cout << "| 9.  Kilo      [km]             |" <<endl;
+            cout << "| 10. Mega      [Mm]             |" <<endl;
+            cout << "+================================+" << endl;
+            cout << "(anda sebelumnya memasukkan nilai sebesar " << nilaiImperial << " " << satuanImperial << ")" << endl;
+            cout << "> ";
+            cin >> pilihanMetrik;
+            switch (pilihanMetrik) {
+            case 1: satuanMetrik = "Nanometer"; break;
+            case 2: satuanMetrik = "Mikrometer"; break;
+            case 3: satuanMetrik = "Milimeter"; break;
+            case 4: satuanMetrik = "Centimeter"; break;
+            case 5: satuanMetrik = "Desimeter"; break;
+            case 6: satuanMetrik = "Meter"; break;
+            case 7: satuanMetrik = "Dekameter"; break;
+            case 8: satuanMetrik = "Hektometer"; break;
+            case 9: satuanMetrik = "Kilometer"; break;
+            case 10: satuanMetrik = "Megameter"; break;
+            default: cout << "pilihan tidak valid, tolong masukkan nilai lagi: "; cin >> pilihanMetrik; break;}
+            //cout << "\nAnda telah memilih untuk mengkonversikan, sebesar" << endl;
+            cout << nilaiImperial << " " << satuanImperial << " menjadi satuan dalam " << satuanMetrik << endl;
+            char yakin;
+            cout << "\nApakah anda yakin dengan pilihan anda atau ingin kembali memilih dari awal?\nY untuk yakin, N untuk kembali (Y/n): ";
+            cin >> yakin;
+            system("clear");
+            if (yakin == 'y' || yakin == 'Y') {
+                pilihNilai = false;}
+            else if (yakin == 'n' || yakin == 'N') {
+                cout << "Silahkan pilih ulang" << endl;
+                cout << "nilai anda sebelumnya: "<<nilaiImperial<<" "<<satuanImperial << endl;}
+            else {
+                cout << "pilihan tidak valid, harap pilih ulang (Y,y,N,n): "; cin >> yakin;}
+            }
+            // KALKULATOR
+            double hasil;
+                if (pilihanImperial == 1) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 25400000; break;
+                    case 2: hasil = nilaiImperial * 25400; break;
+                    case 3: hasil = nilaiImperial * 25.4; break;
+                    case 4: hasil = nilaiImperial * 2.54; break;
+                    case 5: hasil = nilaiImperial * 0.254; break;
+                    case 6: hasil = nilaiImperial * 0.0254; break;
+                    case 7: hasil = nilaiImperial * 0.00254; break;
+                    case 8: hasil = nilaiImperial * 0.000254; break;
+                    case 9: hasil = nilaiImperial * 0.0000254; break;
+                    case 10: hasil = nilaiImperial * 0.0000000254; break;}}
+                else if (pilihanImperial == 2) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 304800000; break;
+                    case 2: hasil = nilaiImperial * 304800; break;
+                    case 3: hasil = nilaiImperial * 304.8; break;
+                    case 4: hasil = nilaiImperial * 30.48; break;
+                    case 5: hasil = nilaiImperial * 3.048; break;
+                    case 6: hasil = nilaiImperial * 0.3048; break;
+                    case 7: hasil = nilaiImperial * 0.03048; break;
+                    case 8: hasil = nilaiImperial * 0.003048; break;
+                    case 9: hasil = nilaiImperial * 0.0003048; break;
+                    case 10: hasil = nilaiImperial * 0.0000003048; break;}}
+                else if (pilihanImperial == 3) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 914400000; break;
+                    case 2: hasil = nilaiImperial * 914400; break;
+                    case 3: hasil = nilaiImperial * 914.4; break;
+                    case 4: hasil = nilaiImperial * 91.44; break;
+                    case 5: hasil = nilaiImperial * 9.144; break;
+                    case 6: hasil = nilaiImperial * 0.9144; break;
+                    case 7: hasil = nilaiImperial * 0.09144; break;
+                    case 8: hasil = nilaiImperial * 0.009144; break;
+                    case 9: hasil = nilaiImperial * 0.0009144; break;
+                    case 10: hasil = nilaiImperial * 0.0000009144; break;}}
+                else if (pilihanImperial == 4) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 1609344000000; break;
+                    case 2: hasil = nilaiImperial * 1609344000; break;
+                    case 3: hasil = nilaiImperial * 1609344; break;
+                    case 4: hasil = nilaiImperial * 160934.4; break;
+                    case 5: hasil = nilaiImperial * 16093.44; break;
+                    case 6: hasil = nilaiImperial * 1609.344; break;
+                    case 7: hasil = nilaiImperial * 160.9344; break;
+                    case 8: hasil = nilaiImperial * 16.09344; break;
+                    case 9: hasil = nilaiImperial * 1.609344; break;
+                    case 10: hasil = nilaiImperial * 0.001609344; break;}}
+                else if (pilihanImperial == 5) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 1609344000000; break;
+                    case 2: hasil = nilaiImperial * 1609344000; break;
+                    case 3: hasil = nilaiImperial * 1609344; break;
+                    case 4: hasil = nilaiImperial * 160934.4; break;
+                    case 5: hasil = nilaiImperial * 16093.44; break;
+                    case 6: hasil = nilaiImperial * 1609.344; break;
+                    case 7: hasil = nilaiImperial * 160.9344; break;
+                    case 8: hasil = nilaiImperial * 16.09344; break;
+                    case 9: hasil = nilaiImperial * 1.609344; break;
+                    case 10: hasil = nilaiImperial * 0.001609344; break;}}
+
+
+
+            // end KALKULATOR
+            //cout << " +=========================================================+" <<endl;
+            cout << " Hasil konversi dari...\n "<< nilaiImperial << " " << satuanImperial << endl;
+            cout.imbue(locale(""));
+            cout << fixed << hasil << " " << satuanMetrik;
+            }
+
+
+            // END IMPERIAL KE METRIK
+
+
+        else if (arahKonversi = 'i') {
+            //system("clear");
+            cout << "blm ngab, sabar" << endl;
+            cin >> arahKonversi;
         }
         else (
-        cout << "pilihan tidak valid");
+        cout << "pilihan tidak valid") <<endl;
+        cin >> arahKonversi;
     // END PANJANG
     break;
 
