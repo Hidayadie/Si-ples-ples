@@ -241,23 +241,22 @@ void batuguntingkertas() {
     bool bermainLagi = true;
 
     while (bermainLagi) {
-        cout << " +========================================================+" <<endl;
-        cout << " |  Selamat datang dalam permainan Batu, Gunting, Kertas! |" << endl;
-        cout << " |             Silahkan pilih elemen anda..               |" << endl;
-        cout << " +========================================================+" <<endl;
-        cout << endl;
-        cout << "    _______            _______                 _______" << endl;
-        cout << "---'   ____)       ---'   ____)____        ---'   ____)____" << endl;
-        cout << "     (_____)                 ______)                 ______)" << endl;
-        cout << "     (_____)              __________)                _______)" << endl;
-        cout << "     (____)              (____)                     _______)" << endl;
-        cout << "---.__(___)        ---.__(___)             ---.__________)" << endl;
-        cout << "     1                    2                        3" << endl;
-        cout << "   Batu                Gunting                   Kertas" << endl;
-        cout << "pilihan anda (1,2,3): ";
-        cin >> pilihanPemain;
+        cout << " +===============================================================+" <<endl;
+        cout << " |     Selamat datang dalam permainan Batu, Gunting, Kertas!     |" << endl;
+        cout << " |                 Silahkan pilih elemen anda..                  |" << endl;
+        cout << " +===============================================================+" << endl;
+        cout << " |                                                               |" << endl;
+        cout << " |     _______            _______                 _______        |" << endl;
+        cout << " | ---'   ____)       ---'   ____)____        ---'   ____)____   |" << endl;
+        cout << " |      (_____)                 ______)                 ______)  |" << endl;
+        cout << " |      (_____)              __________)                _______) |" << endl;
+        cout << " |      (____)              (____)                     _______)  |" << endl;
+        cout << " | ---.__(___)        ---.__(___)             ---.__________)    |" << endl;
+        cout << " |      1                    2                        3          |" << endl;
+        cout << " |    Batu                Gunting                   Kertas       |" << endl;
+        cout << " +===============================================================+" << endl;
+        cout << "pilihan anda (1,2,3): ";cin >> pilihanPemain;
 
-        //int pilihanPemain = ;
         if (pilihanPemain < 1 || pilihanPemain > 3 || cin.fail()) {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -613,7 +612,9 @@ void konversi() {
     // END PANJANG
     break;
 
+    // START SUHU
     case '2':
+
     break;
     case '3':
     break;
