@@ -14,6 +14,9 @@ void batuguntingkertas();
 void tigaJadi();
 
 void menuUtility();
+void kalkulasiIM();
+void kalkulasiMI();
+void tabelPanjang();
 void konversi ();
 void kalkulatorbmi ();
 
@@ -345,7 +348,7 @@ void menuUtility() {
         cout << "\t|   1. Konversi unit                                |" << endl;
         cout << "\t|   2. Kalkulator BMI                               |" << endl;
         cout << "\t|   3. Simulasi bulan                               |" << endl;
-        cout << "\t|                                                   |" << endl;
+        cout << "\t|   4. test                                         |" << endl;
         cout << "\t|                                                   |" << endl;
         cout << "\t+===================================================+" << endl;
         cout << "\t|       'X' Keluar              'G' Kembali         |" << endl;
@@ -413,7 +416,7 @@ void konversi() {
     cout << " +=========================================================+" <<endl;
     cout << " | 1. Panjang                                              |" <<endl;
     cout << " | 2. Suhu                                                 |" <<endl;
-    cout << " | 3.                                                      |" <<endl;
+    cout << " | 3. test                                                 |" <<endl;
     cout << " |                                                         |" <<endl;
     cout << " +=========================================================+" <<endl;
     cout << " |        'X' Menu Awal               'G' Kembali          |" << endl;
@@ -427,6 +430,7 @@ void konversi() {
         system("clear");
         menuKonversi = false;
         //bool menuPanjang = true;
+        //while (menuPanjang) {
         cout << "+============================+" << endl;
         cout << "|    Anda memilih panjang    |" << endl;
         cout << "|        Pilih tujuan        |" << endl;
@@ -441,7 +445,9 @@ void konversi() {
         cout << "\n Pilihan anda : ";
         cin >> arahKonversi;
         arahKonversi = tolower(arahKonversi);
+        //}
         if (arahKonversi == 'm') {
+            //menuPanjang = false;
             int pilihanImperial;
             int pilihanMetrik;
             string satuanImperial;
@@ -647,9 +653,20 @@ void konversi() {
             cout <<"Hasil konversi dari "<<nilaiImperial<<" "<<satuanImperial<<" menjadi "<<satuanMetrik<<" adalah...\n "<<endl;
             cout.imbue(locale(""));
             cout << fixed << hasil << " " << satuanMetrik;
-            cout <<"\n";
-            }
-
+            char yakin;
+            cout <<"\nApakah anda ingin kembali ke menu awal atau ingin menghitung ulang?\n(Y untuk kembali, n untuk ulangi): ";cin >> yakin;
+            if (yakin == 'y' || yakin == 'Y') {
+                system("clear");
+                pilihNilai = false;
+                menuKonversi = true;}
+            else if (yakin == 'n' || yakin == 'N') {
+                system("clear");
+                pilihNilai = true;
+                cout << "Silahkan pilih ulang" << endl;
+                cout << "nilai anda sebelumnya: "<<nilaiImperial<<" "<<satuanImperial << endl;}
+            else {
+                cout << "pilihan tidak valid, harap pilih ulang (Y,y,N,n): "; cin >> yakin;}
+        }
 
             // END IMPERIAL KE METRIK
 
@@ -685,3 +702,225 @@ void konversi() {
     }
     }
 }
+
+
+void tabelPanjang(){
+
+}
+
+void kalkulasiIM(); {
+    //menuPanjang = false;
+    int pilihanImperial, pilihanMetrik;
+    string satuanImperial, satuanMetrik;
+    double nilaiImperial, nilaiMetrik;
+    system("clear");
+    bool pilihNilai = true;
+    while (pilihNilai) {
+    cout << "+================================+" << endl;
+    cout << "|      Silahkan pilih satuan     |" << endl;
+    cout << "|            yang ada            |" <<endl;
+    cout << "+================================+" << endl;
+    cout << "| 1.  Inci      [in]   (inch)    |"  << endl;
+    cout << "| 2.  Kaki      [ft]   (feet)    |" << endl;
+    cout << "| 3.  Yard      [yd]   (yard)    |" <<endl;
+    cout << "| 4.  Mil       [mi]   (mile)    |" <<endl;
+    cout << "| 5.  Mil laut  [nmi]  (Nmile)   |" <<endl;
+    cout << "| 6.  Liga      [lea]  (league)  |" <<endl;
+    cout << "| 7.  Furlong   [fur]  (furlong) |" <<endl;
+    cout << "| 8.  Tangan    [hh]   (hand)    |" <<endl;
+    cout << "| 9.  Link      [ch]   (chain)   |" <<endl;
+    cout << "| 10. Rod       [rd]   (rod)     |" <<endl;
+    cout << "+================================+" << endl;
+    cout << "> ";
+    cin >> pilihanImperial;
+    switch (pilihanImperial) {
+        case 1: satuanImperial = "Inci"; break;
+        case 2: satuanImperial = "kaki"; break;
+        case 3: satuanImperial = "Yard"; break;
+        case 4: satuanImperial = "Mil"; break;
+        case 5: satuanImperial = "Mil Laut"; break;
+        case 6: satuanImperial = "Liga"; break;
+        case 7: satuanImperial = "Furlong"; break;
+        case 8: satuanImperial = "Tangan"; break;
+        case 9: satuanImperial = "Link"; break;
+        case 10: satuanImperial = "Rod"; break;
+        default: cout << "pilihan tidak valid, harap pilih ulang: "; cin >> pilihanImperial; break;}
+    cout << "sekarang berikan nilai yang ingin anda konversikan: ";cin >> nilaiImperial;
+    while (nilaiImperial == 0) {cout << "tolong berikan nilai yang benar, nilai: "; cin >>nilaiImperial;}
+    system("clear");
+    cout << "+================================+" << endl;
+    cout << "|      Silahkan pilih satuan     |" << endl;
+    cout << "|        yang ada (Meter)        |" <<endl;
+    cout << "+================================+" << endl;
+    cout << "| 1.  Nano      [nm]             |" <<endl;
+    cout << "| 2.  Mikro     [µm]             |" << endl;
+    cout << "| 3.  Mili      [mm]             |" << endl;
+    cout << "| 4.  Centi     [cm]             |" << endl;
+    cout << "| 5.  Desi      [dm]             |" <<endl;
+    cout << "| 6.  Meter     [m]              |" <<endl;
+    cout << "| 7.  Deka      [dam]            |" <<endl;
+    cout << "| 8.  Hekto     [hm]             |" <<endl;
+    cout << "| 9.  Kilo      [km]             |" <<endl;
+    cout << "| 10. Mega      [Mm]             |" <<endl;
+    cout << "+================================+" << endl;
+    cout << "(anda sebelumnya memasukkan nilai sebesar " << nilaiImperial << " " << satuanImperial << ")" << endl;
+    cout << "> ";
+    cin >> pilihanMetrik;
+    switch (pilihanMetrik) {
+        case 1: satuanMetrik = "Nanometer"; break;
+        case 2: satuanMetrik = "Mikrometer"; break;
+        case 3: satuanMetrik = "Milimeter"; break;
+        case 4: satuanMetrik = "Centimeter"; break;
+        case 5: satuanMetrik = "Desimeter"; break;
+        case 6: satuanMetrik = "Meter"; break;
+        case 7: satuanMetrik = "Dekameter"; break;
+        case 8: satuanMetrik = "Hektometer"; break;
+        case 9: satuanMetrik = "Kilometer"; break;
+        case 10: satuanMetrik = "Megameter"; break;
+        default: cout << "pilihan tidak valid, tolong masukkan nilai lagi: "; cin >> pilihanMetrik; break;}
+    cout << nilaiImperial << " " << satuanImperial << " menjadi satuan dalam " << satuanMetrik << endl;
+    char yakin;
+    cout << "\nApakah anda yakin dengan pilihan anda atau ingin kembali memilih dari awal?\nY untuk yakin, N untuk kembali (Y/n): ";
+    cin >> yakin;
+    system("clear");
+    if (yakin == 'y' || yakin == 'Y') {
+        pilihNilai = false;}
+    else if (yakin == 'n' || yakin == 'N') {
+        cout << "Silahkan pilih ulang" << endl;
+        cout << "nilai anda sebelumnya: "<<nilaiImperial<<" "<<satuanImperial << endl;}
+    else {
+        cout << "pilihan tidak valid, harap pilih ulang (Y,y,N,n): "; cin >> yakin;}}
+    // KALKULATOR
+            double hasil;
+                if (pilihanImperial == 1) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 25400000; break;
+                    case 2: hasil = nilaiImperial * 25400; break;
+                    case 3: hasil = nilaiImperial * 25.4; break;
+                    case 4: hasil = nilaiImperial * 2.54; break;
+                    case 5: hasil = nilaiImperial * 0.254; break;
+                    case 6: hasil = nilaiImperial * 0.0254; break;
+                    case 7: hasil = nilaiImperial * 0.00254; break;
+                    case 8: hasil = nilaiImperial * 0.000254; break;
+                    case 9: hasil = nilaiImperial * 0.0000254; break;
+                    case 10: hasil = nilaiImperial * 0.0000000254; break;}}
+                else if (pilihanImperial == 2) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 304800000; break;
+                    case 2: hasil = nilaiImperial * 304800; break;
+                    case 3: hasil = nilaiImperial * 304.8; break;
+                    case 4: hasil = nilaiImperial * 30.48; break;
+                    case 5: hasil = nilaiImperial * 3.048; break;
+                    case 6: hasil = nilaiImperial * 0.3048; break;
+                    case 7: hasil = nilaiImperial * 0.03048; break;
+                    case 8: hasil = nilaiImperial * 0.003048; break;
+                    case 9: hasil = nilaiImperial * 0.0003048; break;
+                    case 10: hasil = nilaiImperial * 0.0000003048; break;}}
+                else if (pilihanImperial == 3) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 914400000; break;
+                    case 2: hasil = nilaiImperial * 914400; break;
+                    case 3: hasil = nilaiImperial * 914.4; break;
+                    case 4: hasil = nilaiImperial * 91.44; break;
+                    case 5: hasil = nilaiImperial * 9.144; break;
+                    case 6: hasil = nilaiImperial * 0.9144; break;
+                    case 7: hasil = nilaiImperial * 0.09144; break;
+                    case 8: hasil = nilaiImperial * 0.009144; break;
+                    case 9: hasil = nilaiImperial * 0.0009144; break;
+                    case 10: hasil = nilaiImperial * 0.0000009144; break;}}
+                else if (pilihanImperial == 4) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 1609344000000; break;
+                    case 2: hasil = nilaiImperial * 1609344000; break;
+                    case 3: hasil = nilaiImperial * 1609344; break;
+                    case 4: hasil = nilaiImperial * 160934.4; break;
+                    case 5: hasil = nilaiImperial * 16093.44; break;
+                    case 6: hasil = nilaiImperial * 1609.344; break;
+                    case 7: hasil = nilaiImperial * 160.9344; break;
+                    case 8: hasil = nilaiImperial * 16.09344; break;
+                    case 9: hasil = nilaiImperial * 1.609344; break;
+                    case 10: hasil = nilaiImperial * 0.001609344; break;}}
+                else if (pilihanImperial == 5) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 1852000000000; break;
+                    case 2: hasil = nilaiImperial * 1852000000; break;
+                    case 3: hasil = nilaiImperial * 1852000; break;
+                    case 4: hasil = nilaiImperial * 185200; break;
+                    case 5: hasil = nilaiImperial * 18520; break;
+                    case 6: hasil = nilaiImperial * 1852; break;
+                    case 7: hasil = nilaiImperial * 185.2; break;
+                    case 8: hasil = nilaiImperial * 18.52; break;
+                    case 9: hasil = nilaiImperial * 1.852; break;
+                    case 10: hasil = nilaiImperial * 0.001852; break;}}
+                else if (pilihanImperial == 6) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 5556000000000; break;
+                    case 2: hasil = nilaiImperial * 5556000000; break;
+                    case 3: hasil = nilaiImperial * 5556000; break;
+                    case 4: hasil = nilaiImperial * 555600; break;
+                    case 5: hasil = nilaiImperial * 55560; break;
+                    case 6: hasil = nilaiImperial * 5556; break;
+                    case 7: hasil = nilaiImperial * 555.6; break;
+                    case 8: hasil = nilaiImperial * 55.56; break;
+                    case 9: hasil = nilaiImperial * 5.556; break;
+                    case 10: hasil = nilaiImperial * 0.005556; break;}}
+                else if (pilihanImperial == 7) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 201168000000; break;
+                    case 2: hasil = nilaiImperial * 201168000; break;
+                    case 3: hasil = nilaiImperial * 201168; break;
+                    case 4: hasil = nilaiImperial * 20116.8; break;
+                    case 5: hasil = nilaiImperial * 2011.68; break;
+                    case 6: hasil = nilaiImperial * 201.168; break;
+                    case 7: hasil = nilaiImperial * 20.1168; break;
+                    case 8: hasil = nilaiImperial * 2.01168; break;
+                    case 9: hasil = nilaiImperial * 0.201168; break;
+                    case 10: hasil = nilaiImperial * 0.00201168; break;}}
+                else if (pilihanImperial == 8) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 203200000; break;
+                    case 2: hasil = nilaiImperial * 203200; break;
+                    case 3: hasil = nilaiImperial * 203.2; break;
+                    case 4: hasil = nilaiImperial * 20.32; break;
+                    case 5: hasil = nilaiImperial * 2.032; break;
+                    case 6: hasil = nilaiImperial * 0.2032; break;
+                    case 7: hasil = nilaiImperial * 0.02032; break;
+                    case 8: hasil = nilaiImperial * 0.002032; break;
+                    case 9: hasil = nilaiImperial * 0.0002032; break;
+                    case 10: hasil = nilaiImperial * 0.0000002032; break;}}
+                else if (pilihanImperial == 9) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 2011680; break;
+                    case 2: hasil = nilaiImperial * 2011.68; break;
+                    case 3: hasil = nilaiImperial * 201.168; break;
+                    case 4: hasil = nilaiImperial * 20.1168; break;
+                    case 5: hasil = nilaiImperial * 2.01168; break;
+                    case 6: hasil = nilaiImperial * 0.201168; break;
+                    case 7: hasil = nilaiImperial * 0.0201168; break;
+                    case 8: hasil = nilaiImperial * 0.00201168; break;
+                    case 9: hasil = nilaiImperial * 0.000201168; break;
+                    case 10: hasil = nilaiImperial * 0.00000201168; break;}}
+                else if (pilihanImperial == 10) {switch (pilihanMetrik){
+                    case 1: hasil = nilaiImperial * 50292000; break;
+                    case 2: hasil = nilaiImperial * 50292; break;
+                    case 3: hasil = nilaiImperial * 5029.2; break;
+                    case 4: hasil = nilaiImperial * 502.92; break;
+                    case 5: hasil = nilaiImperial * 50.292; break;
+                    case 6: hasil = nilaiImperial * 5.0292; break;
+                    case 7: hasil = nilaiImperial * 0.50292; break;
+                    case 8: hasil = nilaiImperial * 0.050292; break;
+                    case 9: hasil = nilaiImperial * 0.0050292; break;
+                    case 10: hasil = nilaiImperial * 0.0000050292; break;}}
+    // end KALKULATOR
+    cout <<"Maka dari itu, " <<endl;
+    cout <<"Hasil konversi dari "<<nilaiImperial<<" "<<satuanImperial<<" menjadi "<<satuanMetrik<<" adalah...\n "<<endl;
+    cout.imbue(locale(""));cout << fixed << hasil << " " << satuanMetrik;
+    char yakin;
+    cout <<"\nApakah anda ingin kembali ke menu awal atau ingin menghitung ulang?\n(Y untuk kembali, n untuk ulangi): ";cin >> yakin;
+    if (yakin == 'y' || yakin == 'Y') {
+        system("clear");
+        pilihNilai = false;
+        menuKonversi = true;}
+    else if (yakin == 'n' || yakin == 'N') {
+        system("clear");
+        pilihNilai = true;
+        cout << "Silahkan pilih ulang" << endl;
+        cout << "nilai anda sebelumnya: "<<nilaiImperial<<" "<<satuanImperial << endl;}
+    else {
+        cout << "pilihan tidak valid, harap pilih ulang (Y,y,N,n): "; cin >> yakin;}
+
+}
+
+            // END IMPERIAL KE METRIK
+
