@@ -577,24 +577,77 @@ void konversi() {
                     case 9: hasil = nilaiImperial * 1.609344; break;
                     case 10: hasil = nilaiImperial * 0.001609344; break;}}
                 else if (pilihanImperial == 5) {switch (pilihanMetrik) {
-                    case 1: hasil = nilaiImperial * 1609344000000; break;
-                    case 2: hasil = nilaiImperial * 1609344000; break;
-                    case 3: hasil = nilaiImperial * 1609344; break;
-                    case 4: hasil = nilaiImperial * 160934.4; break;
-                    case 5: hasil = nilaiImperial * 16093.44; break;
-                    case 6: hasil = nilaiImperial * 1609.344; break;
-                    case 7: hasil = nilaiImperial * 160.9344; break;
-                    case 8: hasil = nilaiImperial * 16.09344; break;
-                    case 9: hasil = nilaiImperial * 1.609344; break;
-                    case 10: hasil = nilaiImperial * 0.001609344; break;}}
-
-
-
+                    case 1: hasil = nilaiImperial * 1852000000000; break;
+                    case 2: hasil = nilaiImperial * 1852000000; break;
+                    case 3: hasil = nilaiImperial * 1852000; break;
+                    case 4: hasil = nilaiImperial * 185200; break;
+                    case 5: hasil = nilaiImperial * 18520; break;
+                    case 6: hasil = nilaiImperial * 1852; break;
+                    case 7: hasil = nilaiImperial * 185.2; break;
+                    case 8: hasil = nilaiImperial * 18.52; break;
+                    case 9: hasil = nilaiImperial * 1.852; break;
+                    case 10: hasil = nilaiImperial * 0.001852; break;}}
+                else if (pilihanImperial == 6) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 5556000000000; break;
+                    case 2: hasil = nilaiImperial * 5556000000; break;
+                    case 3: hasil = nilaiImperial * 5556000; break;
+                    case 4: hasil = nilaiImperial * 555600; break;
+                    case 5: hasil = nilaiImperial * 55560; break;
+                    case 6: hasil = nilaiImperial * 5556; break;
+                    case 7: hasil = nilaiImperial * 555.6; break;
+                    case 8: hasil = nilaiImperial * 55.56; break;
+                    case 9: hasil = nilaiImperial * 5.556; break;
+                    case 10: hasil = nilaiImperial * 0.005556; break;}}
+                else if (pilihanImperial == 7) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 201168000000; break;
+                    case 2: hasil = nilaiImperial * 201168000; break;
+                    case 3: hasil = nilaiImperial * 201168; break;
+                    case 4: hasil = nilaiImperial * 20116.8; break;
+                    case 5: hasil = nilaiImperial * 2011.68; break;
+                    case 6: hasil = nilaiImperial * 201.168; break;
+                    case 7: hasil = nilaiImperial * 20.1168; break;
+                    case 8: hasil = nilaiImperial * 2.01168; break;
+                    case 9: hasil = nilaiImperial * 0.201168; break;
+                    case 10: hasil = nilaiImperial * 0.00201168; break;}}
+                 else if (pilihanImperial == 8) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 203200000; break;
+                    case 2: hasil = nilaiImperial * 203200; break;
+                    case 3: hasil = nilaiImperial * 203.2; break;
+                    case 4: hasil = nilaiImperial * 20.32; break;
+                    case 5: hasil = nilaiImperial * 2.032; break;
+                    case 6: hasil = nilaiImperial * 0.2032; break;
+                    case 7: hasil = nilaiImperial * 0.02032; break;
+                    case 8: hasil = nilaiImperial * 0.002032; break;
+                    case 9: hasil = nilaiImperial * 0.0002032; break;
+                    case 10: hasil = nilaiImperial * 0.0000002032; break;}}
+                 else if (pilihanImperial == 9) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 2011680; break;
+                    case 2: hasil = nilaiImperial * 2011.68; break;
+                    case 3: hasil = nilaiImperial * 201.168; break;
+                    case 4: hasil = nilaiImperial * 20.1168; break;
+                    case 5: hasil = nilaiImperial * 2.01168; break;
+                    case 6: hasil = nilaiImperial * 0.201168; break;
+                    case 7: hasil = nilaiImperial * 0.0201168; break;
+                    case 8: hasil = nilaiImperial * 0.00201168; break;
+                    case 9: hasil = nilaiImperial * 0.000201168; break;
+                    case 10: hasil = nilaiImperial * 0.00000201168; break;}}
+                 else if (pilihanImperial == 10) {switch (pilihanMetrik) {
+                    case 1: hasil = nilaiImperial * 50292000; break;
+                    case 2: hasil = nilaiImperial * 50292; break;
+                    case 3: hasil = nilaiImperial * 5029.2; break;
+                    case 4: hasil = nilaiImperial * 502.92; break;
+                    case 5: hasil = nilaiImperial * 50.292; break;
+                    case 6: hasil = nilaiImperial * 5.0292; break;
+                    case 7: hasil = nilaiImperial * 0.50292; break;
+                    case 8: hasil = nilaiImperial * 0.050292; break;
+                    case 9: hasil = nilaiImperial * 0.0050292; break;
+                    case 10: hasil = nilaiImperial * 0.0000050292; break;}}
             // end KALKULATOR
-            //cout << " +=========================================================+" <<endl;
-            cout << " Hasil konversi dari...\n "<< nilaiImperial << " " << satuanImperial << endl;
+            cout <<"Maka dari itu, " <<endl;
+            cout <<"Hasil konversi dari "<<nilaiImperial<<" "<<satuanImperial<<" menjadi "<<satuanMetrik<<" adalah...\n "<<endl;
             cout.imbue(locale(""));
             cout << fixed << hasil << " " << satuanMetrik;
+            cout <<"\n";
             }
 
 
