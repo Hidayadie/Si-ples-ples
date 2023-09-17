@@ -580,10 +580,110 @@ void kalkulasiMM(){
             case 8: hasil = nilaiMetrik1 * 0.00000000001; break;
             case 9: hasil = nilaiMetrik1 * 0.000000000001; break;
             case 10: hasil = nilaiMetrik1 * 0.000000000000001; break;}}
-
+        else if (pilihanMetrik1 == 2) {switch (pilihanMetrik2) {
+            case 1: hasil = nilaiMetrik1 * 1000; break;
+            case 2: hasil = nilaiMetrik1 * 1; break;
+            case 3: hasil = nilaiMetrik1 * 0.001; break;
+            case 4: hasil = nilaiMetrik1 * 0.0001; break;
+            case 5: hasil = nilaiMetrik1 * 0.00001; break;
+            case 6: hasil = nilaiMetrik1 * 0.000001; break;
+            case 7: hasil = nilaiMetrik1 * 0.0000001; break;
+            case 8: hasil = nilaiMetrik1 * 0.00000001; break;
+            case 9: hasil = nilaiMetrik1 * 0.000000001; break;
+            case 10: hasil = nilaiMetrik1 * 0.000000000001; break;}}
+        else if (pilihanMetrik1 == 3) {switch (pilihanMetrik2) {
+            case 1: hasil = nilaiMetrik1 * 1000000; break;
+            case 2: hasil = nilaiMetrik1 * 1000; break;
+            case 3: hasil = nilaiMetrik1 * 1; break;
+            case 4: hasil = nilaiMetrik1 * 0.1; break;
+            case 5: hasil = nilaiMetrik1 * 0.01; break;
+            case 6: hasil = nilaiMetrik1 * 0.001; break;
+            case 7: hasil = nilaiMetrik1 * 0.0001; break;
+            case 8: hasil = nilaiMetrik1 * 0.00001; break;
+            case 9: hasil = nilaiMetrik1 * 0.000001; break;
+            case 10: hasil = nilaiMetrik1 * 0.000000001; break;}}
+        else if (pilihanMetrik1 == 4) {switch (pilihanMetrik2) {
+            case 1: hasil = nilaiMetrik1 * 10000000; break;
+            case 2: hasil = nilaiMetrik1 * 10000; break;
+            case 3: hasil = nilaiMetrik1 * 10; break;
+            case 4: hasil = nilaiMetrik1 * 1; break;
+            case 5: hasil = nilaiMetrik1 * 0.1; break;
+            case 6: hasil = nilaiMetrik1 * 0.01; break;
+            case 7: hasil = nilaiMetrik1 * 0.001; break;
+            case 8: hasil = nilaiMetrik1 * 0.0001; break;
+            case 9: hasil = nilaiMetrik1 * 0.00001; break;
+            case 10: hasil = nilaiMetrik1 * 0.00000001; break;}}
+        else if (pilihanMetrik1 == 5) {switch (pilihanMetrik2) {
+            case 1: hasil = nilaiMetrik1 * 100000000; break;
+            case 2: hasil = nilaiMetrik1 * 100000; break;
+            case 3: hasil = nilaiMetrik1 * 100; break;
+            case 4: hasil = nilaiMetrik1 * 10; break;
+            case 5: hasil = nilaiMetrik1 * 1; break;
+            case 6: hasil = nilaiMetrik1 * 0.1; break;
+            case 7: hasil = nilaiMetrik1 * 0.01; break;
+            case 8: hasil = nilaiMetrik1 * 0.001; break;
+            case 9: hasil = nilaiMetrik1 * 0.0001; break;
+            case 10: hasil = nilaiMetrik1 * 0.0000001; break;}}
+        else if (pilihanMetrik1 == 6) {switch (pilihanMetrik2) {
+            case 1: hasil = nilaiMetrik1 * 1000000000; break;
+            case 2: hasil = nilaiMetrik1 * 1000000; break;
+            case 3: hasil = nilaiMetrik1 * 1000; break;
+            case 4: hasil = nilaiMetrik1 * 100; break;
+            case 5: hasil = nilaiMetrik1 * 10; break;
+            case 6: hasil = nilaiMetrik1 * 1; break;
+            case 7: hasil = nilaiMetrik1 * 0.1; break;
+            case 8: hasil = nilaiMetrik1 * 0.01; break;
+            case 9: hasil = nilaiMetrik1 * 0.001; break;
+            case 10: hasil = nilaiMetrik1 * 0.000001; break;}}
+        else if (pilihanMetrik1 == 7) {switch (pilihanMetrik2) {
+            case 1: hasil = nilaiMetrik1 * 10000000000; break;
+            case 2: hasil = nilaiMetrik1 * 10000000; break;
+            case 3: hasil = nilaiMetrik1 * 10000; break;
+            case 4: hasil = nilaiMetrik1 * 1000; break;
+            case 5: hasil = nilaiMetrik1 * 100; break;
+            case 6: hasil = nilaiMetrik1 * 10; break;
+            case 7: hasil = nilaiMetrik1 * 1; break;
+            case 8: hasil = nilaiMetrik1 * 0.1; break;
+            case 9: hasil = nilaiMetrik1 * 0.01; break;
+            case 10: hasil = nilaiMetrik1 * 0.00001; break;}}
+        else if (pilihanMetrik1 == 8) {switch (pilihanMetrik2) {
+            case 1: hasil = nilaiMetrik1 * 100000000000; break;
+            case 2: hasil = nilaiMetrik1 * 100000000; break;
+            case 3: hasil = nilaiMetrik1 * 100000; break;
+            case 4: hasil = nilaiMetrik1 * 10000; break;
+            case 5: hasil = nilaiMetrik1 * 1000; break;
+            case 6: hasil = nilaiMetrik1 * 100; break;
+            case 7: hasil = nilaiMetrik1 * 10; break;
+            case 8: hasil = nilaiMetrik1 * 1; break;
+            case 9: hasil = nilaiMetrik1 * 0.1; break;
+            case 10: hasil = nilaiMetrik1 * 0.0001; break;}}
+        else if (pilihanMetrik1 == 9) {switch (pilihanMetrik2) {
+            case 1: hasil = nilaiMetrik1 * 1000000000000; break;
+            case 2: hasil = nilaiMetrik1 * 1000000000; break;
+            case 3: hasil = nilaiMetrik1 * 1000000; break;
+            case 4: hasil = nilaiMetrik1 * 100000; break;
+            case 5: hasil = nilaiMetrik1 * 10000; break;
+            case 6: hasil = nilaiMetrik1 * 1000; break;
+            case 7: hasil = nilaiMetrik1 * 100; break;
+            case 8: hasil = nilaiMetrik1 * 10; break;
+            case 9: hasil = nilaiMetrik1 * 1; break;
+            case 10: hasil = nilaiMetrik1 * 0.001; break;}}
+        else if (pilihanMetrik1 == 10) {switch (pilihanMetrik2) {
+            case 1: hasil = nilaiMetrik1 * 1000000000000000; break;
+            case 2: hasil = nilaiMetrik1 * 1000000000000; break;
+            case 3: hasil = nilaiMetrik1 * 1000000000; break;
+            case 4: hasil = nilaiMetrik1 * 100000000; break;
+            case 5: hasil = nilaiMetrik1 * 10000000; break;
+            case 6: hasil = nilaiMetrik1 * 1000000; break;
+            case 7: hasil = nilaiMetrik1 * 100000; break;
+            case 8: hasil = nilaiMetrik1 * 10000; break;
+            case 9: hasil = nilaiMetrik1 * 1000; break;
+            case 10: hasil = nilaiMetrik1 * 1; break;}}
     cout <<"Maka dari itu, " <<endl;
     cout <<"Hasil konversi dari "<<nilaiMetrik1<<" "<<satuanMetrik1<<" menjadi "<<satuanMetrik2<<" adalah...\n "<<endl;
-    cout.imbue(locale(""));cout << fixed << setprecision(100)<<hasil << " " << satuanMetrik2;
+    if (hasil < 1) {
+    cout.imbue(locale(""));cout << fixed << setprecision(20)<<hasil << " " << satuanMetrik2;
+    } else {cout.imbue(locale(""));cout << fixed<<hasil << " " << satuanMetrik2;}
     char yakin2;
     cout <<"\nApakah anda ingin kembali ke menu awal atau ingin menghitung ulang?\n(Y untuk kembali, n untuk ulangi): ";cin >> yakin2;
     if (yakin2 == 'y' || yakin2 == 'Y') {
