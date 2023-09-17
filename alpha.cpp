@@ -542,6 +542,8 @@ void kalkulasiMM(){
     cout << "(anda sebelumnya memasukkan nilai sebesar " << nilaiMetrik1 << " " << satuanMetrik1 << ")" << endl;
     cout << "> ";
     cin >> pilihanMetrik2;
+    if (pilihanMetrik1 == pilihanMetrik2) {
+    cout<<"pilihan anda sama dan tidak akan merubah apapun,\ntolong pilih ulang: ";cin>>pilihanMetrik2;}
     switch (pilihanMetrik2) {
         case 1: satuanMetrik2 = "Nanometer"; break;
         case 2: satuanMetrik2 = "Mikrometer"; break;
@@ -566,6 +568,37 @@ void kalkulasiMM(){
         cout << "nilai anda sebelumnya: "<<nilaiMetrik1<<" "<<satuanMetrik1 << endl;}
     else {
         cout << "pilihan tidak valid, harap pilih ulang (Y,y,N,n): "; cin >> yakin;}
+    double hasil;
+        if (pilihanMetrik1 == 1) {switch (pilihanMetrik2) {
+            case 1: hasil = nilaiMetrik1 * 1; break;
+            case 2: hasil = nilaiMetrik1 * 0.001; break;
+            case 3: hasil = nilaiMetrik1 * 0.000001; break;
+            case 4: hasil = nilaiMetrik1 * 0.0000001; break;
+            case 5: hasil = nilaiMetrik1 * 0.00000001; break;
+            case 6: hasil = nilaiMetrik1 * 0.000000001; break;
+            case 7: hasil = nilaiMetrik1 * 0.0000000001; break;
+            case 8: hasil = nilaiMetrik1 * 0.00000000001; break;
+            case 9: hasil = nilaiMetrik1 * 0.000000000001; break;
+            case 10: hasil = nilaiMetrik1 * 0.000000000000001; break;}}
+
+    cout <<"Maka dari itu, " <<endl;
+    cout <<"Hasil konversi dari "<<nilaiMetrik1<<" "<<satuanMetrik1<<" menjadi "<<satuanMetrik2<<" adalah...\n "<<endl;
+    cout.imbue(locale(""));cout << fixed << setprecision(100)<<hasil << " " << satuanMetrik2;
+    char yakin2;
+    cout <<"\nApakah anda ingin kembali ke menu awal atau ingin menghitung ulang?\n(Y untuk kembali, n untuk ulangi): ";cin >> yakin2;
+    if (yakin2 == 'y' || yakin2 == 'Y') {
+        system("clear");
+        tabelPanjang();
+        }
+    else if (yakin2 == 'n' || yakin2 == 'N') {
+        system("clear");
+        cout << "Silahkan pilih ulang" << endl;
+        cout << "nilai anda sebelumnya: "<<nilaiMetrik1<<" "<<satuanMetrik1<< endl;
+        kalkulasiMM();}
+    else {
+        cout << "pilihan tidak valid, harap pilih ulang (Y,y,N,n): "; cin >> yakin;}
+
+
     }//while
 }//void
 
