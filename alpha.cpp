@@ -8,17 +8,9 @@
 #include <iomanip>
 
 using namespace std;
-void menuPermainan ();
-void tebakAngka();
-void batuguntingkertas();
-void tigaJadi();
-
-void menuUtility();
-void kalkulasiIM();
-void kalkulasiMI();
-void tabelPanjang();
-void konversi ();
-void kalkulatorbmi ();
+void menuPermainan(),tebakAngka(),batuguntingkertas(),tigaJadi();
+void menuUtility(),kalkulasiIM(),kalkulasiMI(),kalkulasiMM(),kalkulasiII(),
+     tabelPanjang(),konversi (),kalkulatorbmi ();
 
 int main() {
     bool menuAwal = true;
@@ -348,7 +340,7 @@ void menuUtility() {
         cout << "\t|   1. Konversi unit                                |" << endl;
         cout << "\t|   2. Kalkulator BMI                               |" << endl;
         cout << "\t|   3. Simulasi bulan                               |" << endl;
-        cout << "\t|   4. test                                         |" << endl;
+        cout << "\t|   4.                                              |" << endl;
         cout << "\t|                                                   |" << endl;
         cout << "\t+===================================================+" << endl;
         cout << "\t|       'X' Keluar              'G' Kembali         |" << endl;
@@ -403,8 +395,6 @@ void menuUtility() {
                 } }
 
 void konversi() {
-    bool menuKonversi = true;
-    while (menuKonversi) {
     char pilihSatuan;
     char arahKonversi;
     cout << " +=========================================================+" <<endl;
@@ -426,7 +416,6 @@ void konversi() {
 
     switch (pilihSatuan) {
     case '1':
-    menuKonversi = false;
     tabelPanjang();
 
     break;
@@ -438,16 +427,13 @@ void konversi() {
     break;
     case 'x':
     //case 'X':
-    menuKonversi = false;
     system("clear");
     main();
     break;
     case 'g':
     case 'G':
-    menuKonversi = false;
     menuUtility();
     break;
-    }
     }
 }
 
@@ -458,28 +444,133 @@ void tabelPanjang(){
     cout << "+============================+" << endl;
     cout << "|    Anda memilih panjang    |" << endl;
     cout << "|        Pilih tujuan        |" << endl;
-    cout << "|                            |" << endl;
-    cout << "|    metrik      imperial    |" << endl;
-    cout << "|      M            I        |" << endl;
+    cout << "|----------------------------|" << endl;
+    cout << "|             M              |" << endl;
+    cout << "|   Metrik   -->   Metrik    |" << endl;
+    cout << "|----------------------------|" << endl;
+    cout << "|             i              |" << endl;
+    cout << "|   Metrik   -->  Imperial   |" << endl;
+    cout << "|----------------------------|" << endl;
+    cout << "|             I              |" << endl;
+    cout << "|  Imperial  -->  Imperial   |" << endl;
+    cout << "|----------------------------|" << endl;
+    cout << "|             m              |" << endl;
+    cout << "|  Imperial  -->   Metrik    |" << endl;
     cout << "|                            |" << endl;
     cout << "+============================+" << endl;
     cout << "|     G = Kembali            |" << endl;
     cout << "|     H = Tabel panjang      |" << endl;
     cout << "+============================+" << endl;
-    cout << "\n Pilihan anda : ";
+    cout << "\nPilihan anda : ";
     cin >> arahKonversi;
-    arahKonversi = tolower(arahKonversi);
+    //arahKonversi = tolower(arahKonversi);
     switch (arahKonversi){
-    case 'M': case 'm':
+    case 'M':
+    system("clear");
+    kalkulasiMM();
+    break;
+    case 'm':
     system("clear");
     kalkulasiIM();
     break;
+    case 'I':
+
+    break;
+    case 'i':
+    cout << "blm ada nantik.."<<endl;
+    break;
+    case 'G': case 'g':
+    system("clear");
+    konversi();
     }
 
 }
 
+void kalkulasiMM(){
+    int pilihanMetrik1, pilihanMetrik2;
+    string satuanMetrik1, satuanMetrik2;
+    double nilaiMetrik1, nilaiMetrik2;
+    system("clear");
+    bool pilihNilai = true;
+    while (pilihNilai) {
+    cout << "+================================+" << endl;
+    cout << "|      Silahkan pilih satuan     |" << endl;
+    cout << "|        yang ada (Meter)        |" <<endl;
+    cout << "+================================+" << endl;
+    cout << "| 1.  Nano      [nm]             |" <<endl;
+    cout << "| 2.  Mikro     [µm]             |" << endl;
+    cout << "| 3.  Mili      [mm]             |" << endl;
+    cout << "| 4.  Centi     [cm]             |" << endl;
+    cout << "| 5.  Desi      [dm]             |" <<endl;
+    cout << "| 6.  Meter     [m]              |" <<endl;
+    cout << "| 7.  Deka      [dam]            |" <<endl;
+    cout << "| 8.  Hekto     [hm]             |" <<endl;
+    cout << "| 9.  Kilo      [km]             |" <<endl;
+    cout << "| 10. Mega      [Mm]             |" <<endl;
+    cout << "+================================+" << endl;
+    cout << "> ";cin >> pilihanMetrik1;
+    switch (pilihanMetrik1) {
+        case 1: satuanMetrik1 = "Nanometer"; break;
+        case 2: satuanMetrik1 = "Mikrometer"; break;
+        case 3: satuanMetrik1 = "Milimeter"; break;
+        case 4: satuanMetrik1 = "Centimeter"; break;
+        case 5: satuanMetrik1 = "Desimeter"; break;
+        case 6: satuanMetrik1 = "Meter"; break;
+        case 7: satuanMetrik1 = "Dekameter"; break;
+        case 8: satuanMetrik1 = "Hektometer"; break;
+        case 9: satuanMetrik1 = "Kilometer"; break;
+        case 10: satuanMetrik1 = "Megameter"; break;
+        default: cout << "pilihan tidak valid, tolong masukkan nilai lagi: "; cin >> pilihanMetrik1; break;}
+    cout << "sekarang berikan nilai yang ingin anda konversikan: ";cin >> nilaiMetrik1;
+    while (nilaiMetrik1 == 0) {cout << "tolong berikan nilai yang benar, nilai: "; cin >>nilaiMetrik1;}
+    system("clear");
+    cout << "+================================+" << endl;
+    cout << "|     Silahkan pilih tujuan      |" << endl;
+    cout << "|        yang ada (Meter)        |" <<endl;
+    cout << "+================================+" << endl;
+    cout << "| 1.  Nano      [nm]             |" <<endl;
+    cout << "| 2.  Mikro     [µm]             |" << endl;
+    cout << "| 3.  Mili      [mm]             |" << endl;
+    cout << "| 4.  Centi     [cm]             |" << endl;
+    cout << "| 5.  Desi      [dm]             |" <<endl;
+    cout << "| 6.  Meter     [m]              |" <<endl;
+    cout << "| 7.  Deka      [dam]            |" <<endl;
+    cout << "| 8.  Hekto     [hm]             |" <<endl;
+    cout << "| 9.  Kilo      [km]             |" <<endl;
+    cout << "| 10. Mega      [Mm]             |" <<endl;
+    cout << "+================================+" << endl;
+    cout << "(anda sebelumnya memasukkan nilai sebesar " << nilaiMetrik1 << " " << satuanMetrik1 << ")" << endl;
+    cout << "> ";
+    cin >> pilihanMetrik2;
+    switch (pilihanMetrik2) {
+        case 1: satuanMetrik2 = "Nanometer"; break;
+        case 2: satuanMetrik2 = "Mikrometer"; break;
+        case 3: satuanMetrik2 = "Milimeter"; break;
+        case 4: satuanMetrik2 = "Centimeter"; break;
+        case 5: satuanMetrik2 = "Desimeter"; break;
+        case 6: satuanMetrik2 = "Meter"; break;
+        case 7: satuanMetrik2 = "Dekameter"; break;
+        case 8: satuanMetrik2 = "Hektometer"; break;
+        case 9: satuanMetrik2 = "Kilometer"; break;
+        case 10: satuanMetrik2 = "Megameter"; break;
+        default: cout << "pilihan tidak valid, tolong masukkan nilai lagi: "; cin >> pilihanMetrik2; break;}
+    cout << nilaiMetrik1 << " " << satuanMetrik1 << " diubah menjadi " << satuanMetrik2 << endl;
+    char yakin;
+    cout << "\nApakah anda yakin dengan pilihan anda atau ingin kembali memilih dari awal?\nY untuk yakin, N untuk kembali (Y/n): ";
+    cin >> yakin;
+    system("clear");
+    if (yakin == 'y' || yakin == 'Y') {
+        pilihNilai = false;}
+    else if (yakin == 'n' || yakin == 'N') {
+        cout << "Silahkan pilih ulang" << endl;
+        cout << "nilai anda sebelumnya: "<<nilaiMetrik1<<" "<<satuanMetrik1 << endl;}
+    else {
+        cout << "pilihan tidak valid, harap pilih ulang (Y,y,N,n): "; cin >> yakin;}
+    }//while
+}//void
+
+
 void kalkulasiIM() {
-    //menuPanjang = false;
     int pilihanImperial, pilihanMetrik;
     string satuanImperial, satuanMetrik;
     double nilaiImperial, nilaiMetrik;
